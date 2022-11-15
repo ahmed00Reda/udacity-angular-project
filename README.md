@@ -10,6 +10,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## some features 
+Project features
+This application reflects the same user experience as that of a real-world e-commerce website, including a(n):
+
+Home page, which displays Product List that the available products for the user to choose and add to their cart (in various quantities), also the features products
+Product details page, which displays more information about any particular product
+Shopping cart, which includes the products that the user has added to their cart
+
+Order confirmation page, which shows the outcome after the user completes the checkout process (i.e., submits the checkout form)
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
@@ -25,3 +35,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+

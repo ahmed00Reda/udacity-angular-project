@@ -1,0 +1,50 @@
+<form class="form" #form="ngForm" (ngSubmit)="onSubmit()">
+  <div class="input-detail">Full Name</div>
+  <input class="input" [(ngModel)]="name" name="fullName" placeholder="(minimum 3 characters)" minlength="3" required #fullname="ngModel"/>
+
+  <div *ngIf="fullname.invalid && fullname.dirty">
+    <div *ngIf="fullname.errors?.['required']" class="error"> 
+      Please provide a name
+    </div>
+    <div *ngIf="fullname.errors?.['minlength']" class="error">
+      The name must contain at least 3 characters.
+    </div> 
+  </div>
+
+
+
+  
+  <div class="input-detail">Address</div>
+  <input class="input" [(ngModel)]="addres"  name="address" placeholder="(minimum 6 characters)" minlength="6"  required #addr="ngModel"/>
+  <div *ngIf="addr.invalid && addr.dirty">
+    <div *ngIf="addr.errors?.['required']" class="error"> 
+      Please provide a address
+    </div>
+    <div *ngIf="addr.errors?.['minlength']" class="error">
+      The name must contain at least 6 characters.
+    </div> 
+  </div>
+
+
+
+
+  <div class="input-detail">Credit card number</div>
+  <input class="input" [(ngModel)]="credit"type="number" name="creditCard" placeholder="(16-digit number)" maxlength="16" required #credit="ngModel" />
+
+  <div *ngIf="credit.invalid && credit.dirty">
+    <div *ngIf="credit.errors?.['required']" class="error"> 
+      Please provide a credit card number
+    </div>
+    <div *ngIf="credit.errors?.['minlength']" class="error">
+      The name must contain at least 16 number
+    </div> 
+  </div>
+
+
+
+
+
+
+  <div style="font-size: 13px;">We'll never share your payment details with any else</div>
+  <input class="submit-input btn btn-primary" type="submit" value="Submit" [disabled]="form.invalid">
+</form>

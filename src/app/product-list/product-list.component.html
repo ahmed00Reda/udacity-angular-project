@@ -1,0 +1,27 @@
+<!-- <div class="container">
+    <div class="row row-cols-4">
+        <div *ngFor="let product of productList" class="col p-4 m-5 text-center">
+            <a routerLink="/productdetail/{{product.id}}"><img src="{{product.url}}"
+             alt="{{product.description}}"
+             class="img-thumbnail"> </a>
+             <p class=" m-1">{{product.name}}</p>
+             
+             <p class="mt-3">{{product.price | currency:'USD'}}</p>
+             <input class="m-1 text-center" value=1 type="number"><br>
+             <button  class=" m-1 btn btn-primary" type="submit" (click)="addToCart" >add to cart</button>
+
+        </div>
+        
+
+
+
+    </div>
+    
+</div> -->
+<div class="container">
+    <div class="row row-cols-3">
+<app-product *ngFor="let product of productList" [product]="product" (like)="addToLiked(product)" ></app-product>
+
+</div>
+    
+</div>

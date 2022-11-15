@@ -1,0 +1,39 @@
+<div class="container">
+    
+        <div  class="row">
+            
+            
+        
+
+            <div  class="row p-4 m-5 text-center">
+               <div class="col-5"> 
+                <a routerLink="/productdetail/{{product.id}}"><img src="{{product.url}}"
+                 alt="{{product.description}}"
+                 class="img-thumbnail"> </a> 
+                </div>
+                <div class="col-7">
+                 <p class=" m-1">{{product.name}}</p>
+                 <p class=" m-1">{{product.description}}</p>
+                 <p class="mt-3">{{product.price | currency:'USD'}}</p>
+                 <select name="amount" class="amount form-select" [(ngModel)]="product.amount"  >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select> <br>
+                 
+                 <button  class=" m-1 btn btn-primary" type="submit" (click)="addToCart(product)" >add to cart</button>
+                </div>
+    
+            </div>
+            
+    
+    
+    
+
+
+
+   
+    
+</div>
